@@ -1,0 +1,142 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .filters {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 50px;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .filters button {
+    width: 120px;
+    padding: 10px 0;
+    background-color: #7ab8d9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .filters button:hover {
+    background-color: #649cb5;
+  }
+  
+  .journeys {
+    margin: 0 50px;
+    border-top: 2px solid #ccc;
+    padding-top: 20px;
+  }
+  
+  .journey-single {
+    border-bottom: 2px solid #ccc;
+    margin-bottom: 20px;
+    padding: 20px 0;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .journey-single:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .journey {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .journey .journey-details {
+    display: flex;
+    align-items: center;
+  }
+  
+  .journey img {
+    width: 110px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-right: 15px;
+  }
+  
+  .journey .journey-info {
+    margin-left: 30px;
+  }
+  
+  .journey .name {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .journey .description {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .journey .category {
+    margin-top: 10px;
+    color: #999;
+    font-size: 14px;
+  }
+  
+  .journey .price {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 200px;
+    color: #444;
+    border-left: 2px solid #eee;
+    padding-left: 20px;
+  }
+  
+  .journey .price button {
+    padding: 12px 20px;
+    background-color: #d3d3d3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+
+  }
+  
+  .journey .price button:hover {
+    background-color: #d475a0;
+  }
+  
+  @media (max-width: 768px) {
+    .filters {
+      flex-direction: column;
+      padding: 15px;
+    }
+  
+    .journeys {
+      margin: 0 20px;
+    }
+  
+    .journey {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .journey .price {
+      border-left: none;
+      border-top: 2px solid #eee;
+      padding-left: 0;
+      padding-top: 20px;
+      margin-top: 20px;
+      width: 100%;
+    }
+  }
+  
