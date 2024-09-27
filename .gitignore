@@ -1,0 +1,59 @@
+# Angular
+node_modules/
+dist/
+tmp/
+temp/
+coverage/
+npm-debug.log
+yarn-error.log
+
+# IDE/Editor config files
+/.idea/
+/.vscode/
+/*.sublime-project
+/*.sublime-workspace
+
+# Optional: if you are using Angular Universal
+/server
+
+# Optional: if you are using ng-packagr
+/.ng_build/
+# .NET Core
+bin/
+obj/
+out/
+
+# NuGet
+*.nupkg
+*.snupkg
+.nuget/
+
+# Entity Framework
+*.mdf
+*.ldf
+
+# Logs
+*.log
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rider/VS Code/VS config files
+.idea/
+.vscode/
+*.vs/
+.vs/
+
+# npm package folder (if using npm)
+node_modules/
+
+# Optional: publish output
+publish/
+
+# Optional: if using Azure Functions or Docker
+local.settings.json
+*.dockerignore
+Dockerfile
