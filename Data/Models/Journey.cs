@@ -12,6 +12,7 @@ namespace StudentBreak.Data.Models
         public string Price { get; set; }
         public DateTime Date {  get; set; }
         public string Category { get; set; } //create Enum Category, change string => Enum!
+        public string ImageName {  get; set; }
 
     }
 }

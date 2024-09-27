@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { IJourney } from './journey.model';
 import { CommonModule } from '@angular/common';
+import { JourneyService } from '../services/journey.service';
 
 @Component({
   selector: 'stu-catalog',
@@ -9,31 +10,22 @@ import { CommonModule } from '@angular/common';
   templateUrl: './catalog.component.html',
   styleUrl: './catalog.component.css'
 })
-export class CatalogComponent {
-  journeys : IJourney[];
+export class CatalogComponent implements OnInit {
+  journeys: IJourney[] = [];
   filter: string = '';
 
-  constructor() {
-    this.journeys = [{
-      id: 1,
-      description : "Sample text",
-      country : "Poland",
-      destination : "Bieszczady",
-      price : 500.0,
-      date: new Date('2005-12-15'),
-      category : "Europa",
-      imageName : "poland.png"
-    },
-    {
-      id: 2,
-      description : "Sample text",
-      country : "Germany",
-      destination : "Berlin",
-      price : 500.0,
-      date: new Date('2005-12-15'),
-      category : "Azja",
-      imageName : "poland.png"
-    }];
+  constructor(private journeyService: JourneyService) { }
+  
+
+  ngOnInit(): void {
+    this.journeyService.getJourneys().subscribe({
+      next: (data: IJourney[]) => {
+        this.journeys = data;
+      },
+      error: (error: any) => {
+        console.error('Error fetching journeys', error);
+      }
+    });
   }
 
   getFilteredJourneys() {
