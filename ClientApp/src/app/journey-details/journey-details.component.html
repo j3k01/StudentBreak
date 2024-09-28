@@ -1,0 +1,14 @@
+<div class="journey">
+    <div class="journey-details">
+      <img src="{{'/assets/' + journey?.imageName}}" alt="" />
+      <div class="journe-info">
+        <div class="country"> {{journey?.country}}</div>
+        <div class="description"> {{journey?.description}}</div>
+        <div class="category">Obszar podróży: {{journey?.category}}</div>
+      </div>
+    </div>
+    <div class="price">
+      <div>Cena przykładowego wyjazdu: {{journey.price}}</div>
+      <button class="cta" (click)="showDetails(journey)">Więcej informacji!</button>
+    </div>
+  </div>

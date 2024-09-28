@@ -1,6 +1,6 @@
 <div class="container">
     <div class="filters">
-      <button class="button" (click)="filter='Europa'">Europa</button>
+      <button class="button" (click)="filter='Europa'">Europa</button> 
       <button class="button" (click)="filter='Azja'">Azja</button>
       <button class="button" (click)="filter='Afryka'">Afryka</button>
       <button class="button" (click)="filter='Ameryka Północna/Południowa'">Ameryka Północna/Południowa</button>
@@ -10,20 +10,7 @@
   
     <ul class="journeys">
       <li class="journey-single" *ngFor="let journey of getFilteredJourneys()">
-        <div class="journey">
-          <div class="journey-details">
-            <img src="{{'/assets/' + journey?.imageName}}" alt="" />
-            <div class="journe-info">
-              <div class="country"> {{journey?.country}}</div>
-              <div class="description"> {{journey?.description}}</div>
-              <div class="category">Obszar podróży: {{journey?.category}}</div>
-            </div>
-          </div>
-          <div class="price">
-            <div>Cena przykładowego wyjazdu: {{journey.price}}</div>
-            <button class="cta">Pokaż więcej informacji!</button>
-          </div>
-        </div>
+          <stu-journey-details [journey]="journey" ></stu-journey-details>
       </li>
     </ul>
   </div>

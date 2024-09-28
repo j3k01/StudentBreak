@@ -1,0 +1,91 @@
+
+  .journey {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .journey .journey-details {
+    display: flex;
+    align-items: center;
+  }
+  
+  .journey img {
+    width: 110px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-right: 15px;
+  }
+  
+  .journey .journey-info {
+    margin-left: 30px;
+  }
+  
+  .journey .name {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .journey .description {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .journey .category {
+    margin-top: 10px;
+    color: #999;
+    font-size: 14px;
+  }
+  
+  .journey .price {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 200px;
+    color: #444;
+    border-left: 2px solid #eee;
+    padding-left: 20px;
+  }
+  
+  .journey .price button {
+    padding: 12px 20px;
+    background-color: #d3d3d3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+
+  }
+  
+  .journey .price button:hover {
+    background-color: #d475a0;
+  }
+  
+  @media (max-width: 768px) {
+    .filters {
+      flex-direction: column;
+      padding: 15px;
+    }
+  
+    .journeys {
+      margin: 0 20px;
+    }
+  
+    .journey {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .journey .price {
+      border-left: none;
+      border-top: 2px solid #eee;
+      padding-left: 0;
+      padding-top: 20px;
+      margin-top: 20px;
+      width: 100%;
+    }
+  }
