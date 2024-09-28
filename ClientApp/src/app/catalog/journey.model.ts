@@ -1,3 +1,5 @@
+import { Category } from "../Enums/category.enum";
+
 export interface IJourney{
     id : number;
     description : string;
@@ -5,6 +7,6 @@ export interface IJourney{
     destination : string;
     price : number;
     date : Date;
-    category : string;
+    category : Category;
     imageName : string;
 }

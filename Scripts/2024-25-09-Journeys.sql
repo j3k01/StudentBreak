@@ -4,5 +4,5 @@
     Country NVARCHAR(50),
     Price NVARCHAR(50),
     Date DATETIME, 
-    Category NVARCHAR(50)   
+    Category INT
 );

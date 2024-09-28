@@ -4,7 +4,7 @@
       <div class="journe-info">
         <div class="country"> {{journey?.country}}</div>
         <div class="description"> {{journey?.description}}</div>
-        <div class="category">Obszar podróży: {{journey?.category}}</div>
+        <div class="category">Obszar podróży: {{ getFriendlyCategoryName(journey.category) }}</div>
       </div>
     </div>
     <div class="price">

@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using StudentBreak.Data.Enums;
+using System.ComponentModel.DataAnnotations;
 
 namespace StudentBreak.Data.Models
 {
@@ -11,8 +12,10 @@ namespace StudentBreak.Data.Models
         public string Country { get; set; }
         public string Price { get; set; }
         public DateTime Date {  get; set; }
-        public string Category { get; set; } //create Enum Category, change string => Enum!
+        public Category Category { get; set; } //create Enum Category, change string => Enum!
         public string ImageName {  get; set; }
+        public string Duration { get; set; }
+        public ICollection<Attraction>? Attractions { get; set; }
 
     }
 }

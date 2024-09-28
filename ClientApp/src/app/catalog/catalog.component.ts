@@ -3,6 +3,8 @@ import { IJourney } from './journey.model';
 import { CommonModule } from '@angular/common';
 import { JourneyService } from '../services/journey.service';
 import { JourneyDetailsComponent } from '../journey-details/journey-details.component';
+import { Category } from "../Enums/category.enum";
+
 @Component({
   selector: 'stu-catalog',
   standalone: true,
@@ -12,7 +14,8 @@ import { JourneyDetailsComponent } from '../journey-details/journey-details.comp
 })
 export class CatalogComponent implements OnInit {
   journeys: IJourney[] = [];
-  filter: string = '';
+  filter: Category | null = null;
+  Category = Category;
 
   constructor(private journeyService: JourneyService) { }
   
@@ -29,7 +32,8 @@ export class CatalogComponent implements OnInit {
   }
 
   getFilteredJourneys() {
-    return this.filter === ''
-      ? this.journeys : this.journeys.filter((journey) => journey.category === this.filter);
+    return this.filter === null
+      ? this.journeys
+      : this.journeys.filter((journey) => journey.category === this.filter);
   }
 }
