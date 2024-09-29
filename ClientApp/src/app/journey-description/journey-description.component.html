@@ -1,0 +1,23 @@
+<div class="journey-description-container">
+    <h1>{{ journey.country }} - {{ journey.destination }}</h1>
+    
+    <div class="journey-details-container">
+      <div class="journey-image">
+        <img src="{{ '/assets/' + journey.imageName }}" alt="{{ journey.country }}">
+      </div>
+      <div class="journey-info">
+        <h3>Opis podróży:</h3>
+        <p>{{ journey.description }}</p>
+        
+        <div class="journey-meta">
+          <p><strong>Kraj:</strong> {{ journey.country }}</p>
+          <p><strong>Kategoria:</strong> {{ getFriendlyCategoryName(journey.category) }}</p>
+          <p><strong>Cena:</strong> {{ journey.price }}</p>
+          <p><strong>Czas trwania:</strong> {{ journey.duration }}</p>
+        </div>
+      </div>
+    </div>
+  
+    <button class="back-button" (click)="goBack()">Powrót do katalogu</button>
+</div>
+  

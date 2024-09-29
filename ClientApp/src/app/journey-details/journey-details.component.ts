@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, Output} from '@angular/core';
 import { IJourney } from '../catalog/journey.model';
 import { Category } from '../Enums/category.enum';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'stu-journey-details',
@@ -12,15 +13,18 @@ import { Category } from '../Enums/category.enum';
 export class JourneyDetailsComponent {
   @Input() journey!: IJourney;
   @Output() moreDetails = new EventEmitter()
+  
+  constructor(private router: Router) { }
 
   categoryEnum = Category;
-
-  showDetails(journey: IJourney): void {
-    console.log('Journey details:', journey);}
 
   getFriendlyCategoryName(category: Category): string {
     if(category === Category.AmerykaPolnocnaPoludniowa)
       return 'Ameryka Północna/Południowa';
     return Category[category];
+  }
+
+  navigateToJourney(id: number): void {
+    this.router.navigate(['/journey', id]);
   }
 }

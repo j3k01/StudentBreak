@@ -8,5 +8,9 @@ export const routes: Routes = [
   {
     path: 'catalog', // Katalog
     loadComponent: () => import('./catalog/catalog.component').then(m => m.CatalogComponent)
+  },
+  {
+    path: 'journey/:id',
+    loadComponent: () => import('./journey-description/journey-description.component').then(m => m.JourneyDescriptionComponent)
   }
 ];

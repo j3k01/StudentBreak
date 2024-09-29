@@ -15,5 +15,11 @@ export class JourneyService {
   getJourneys(): Observable<IJourney[]> {
     return this.http.get<IJourney[]>(this.apiUrl);
   }
+
+  getJourneyById(id: string): Observable<IJourney> {
+    const url = `${this.apiUrl}/${id}`;
+    return this.http.get<IJourney>(url);
+  }
+  
 }
 

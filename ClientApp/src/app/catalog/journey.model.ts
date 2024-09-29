@@ -9,4 +9,5 @@ export interface IJourney{
     date : Date;
     category : Category;
     imageName : string;
+    duration : string;
 }
